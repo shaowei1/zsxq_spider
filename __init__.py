@@ -39,7 +39,9 @@ def rename_md():
                     if "#" not in s:
                         print('#', s)
                     ret = s.split("#")[2]
+                    os.rename('{}/{}'.format(dirName, file_name), '{}/{}{}.txt'.format(dirName, count ,ret.strip().split('/')[0]))
                     count += 1
+                    #break
 
             except Exception as e:
                 print(e)
